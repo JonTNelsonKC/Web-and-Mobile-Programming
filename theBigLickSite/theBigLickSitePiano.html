@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "Raleway", sans-serif;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00a5e3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 75px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
+  color: whitesmoke;
+}
+header p {
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+.pads {
+  background: lightblue;
+  width: 100%;
+  display: flex;
+}
+.pads > div {
+  height: 300px;
+  width: 100px;
+  flex: 1;
+}
+.pad1 {
+  background: #00a5e3;
+}
+.pad2 {
+  background: #8dd7bf;
+}
+.pad3 {
+  background: #ff96c5;
+}
+.pad4 {
+  background: #ff5768;
+}
+.pad5 {
+  background: #ffbf65;
+}
+
+
+.visual > div {
+  position: absolute;
+  bottom: 0%;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  transform: scale(1);
+  z-index: -1;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 00%;
+    left: 80%;
+  }
+}
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="theBigLickSite.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      The Lick the Website - Piano
+    </title>
+  </head>
+
+  <ul>
+    <li><a href="theBigLickSiteHomepage.html">Home</a></li>
+    <li><a href="theBigLickSitePiano.html">The-Lick-Psuedo-Piano</a></li>
+    <li><a href="theBigLickSiteChance.html">Chance</a></li>
+    <li><a href="theBigLickSiteSheetMusic.html">Sheet Music</a></li>
+    <li><a href="theBigLickSiteTheBoys.html">5-Hours</a></li>
+    <li><a href="theBigLickSiteHistory.html">History</a></li>
+    <li><a href="theBigLickSiteContact.html">Contact</a></li>
+</ul>
+
+
+<!-- 
+    Large amounts of code and inspiration from the following YouTube video by Dev Ed
+
+    https://www.youtube.com/watch?v=2VJlzeEVL8A&list=RDQMpOBmFyPdiLA&index=6 
+-->
+
+
+  <body>
+    <section class="app">
+      <header>
+        <h1>The-Lick-Psuedo-Piano</h1>
+        <p>
+          <br>
+          The five piano keys below are the notes found in the lick, try and play it yourself :)
+          <br>
+        </p>
+      </header>
+      <div class="visual"></div>
+      <div class="pads">
+        <div class="pad1">
+          <audio src="./sounds/a4.mp3" class="sound"></audio>
+        </div>
+        <div class="pad2">
+          <audio class="sound">
+            <source src="./sounds/b4.mp3" />
+          </audio>
+        </div>
+        <div class="pad3">
+          <audio class="sound">
+            <source src="./sounds/c4.mp3" />
+          </audio>
+        </div>
+        <div class="pad4">
+          <audio class="sound">
+            <source src="./sounds/d4.mp3" />
+          </audio>
+        </div>
+        <div class="pad5">
+          <audio class="sound">
+            <source src="./sounds/g3.mp3" />
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
